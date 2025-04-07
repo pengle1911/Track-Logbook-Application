@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Logbook</title>
-</head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>    
 <body>
-    <h1>Workout Logbook</h1>
-    <button onclick="location.href='{% url 'new_entry' %}'">New Entry</button>
-    <button onclick="location.href='{% url 'all_entries' %}'">All Entries</button>
-    <button onclick="location.href='{% url 'progression' %}'">Progression</button>
-    <button onclick="location.href='{% url 'pictures_videos' %}'">Pictures & Videos</button>
+    <div class="container">
+        <h1>Workout Logbook</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='/new-entry/'">New Entry</button>
+            <button onclick="window.location.href='/all-entries/'">All Entries</button>
+            <button onclick="window.location.href='/progression/'">Progression</button>
+            <button onclick="window.location.href='/pictures-videos/'">Pictures & Videos</button>
+        </div>
+    </div>
 </body>
 </html>

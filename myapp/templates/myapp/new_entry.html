@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Entry</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
 <body>
-    <h1>New Entry</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+    <div class="container">
+        <h1>New Entry</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
+

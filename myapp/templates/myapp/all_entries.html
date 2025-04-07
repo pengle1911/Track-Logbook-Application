@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Entries</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
 <body>
-    <h1>All Entries</h1>
+    <div class="container">
+        <h1>All Entries</h1>
+        <form method="GET" action="/entry/" class="date-form">
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date">
+            <button type="submit">View Entry</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Entry Details</h1>
+        <div class="entry-details">
+            <p><strong>Title:</strong> {{ entry.title }}</p>
+            <p><strong>Date:</strong> {{ entry.date }}</p>
+            <p><strong>Location:</strong> {{ entry.location }}</p>
+            <p><strong>Workout:</strong> {{ entry.workout }}</p>
+            <p><strong>Rest Day:</strong> {{ entry.rest_day|yesno:"Yes,No" }}</p>
+            <p><strong>Race Day:</strong> {{ entry.race_day|yesno:"Yes,No" }}</p>
+        </div>
+        <button onclick="window.location.href='/all-entries/'">Back to All Entries</button>
+    </div>
+</body>
+</html>

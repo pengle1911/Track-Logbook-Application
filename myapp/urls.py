@@ -1,10 +1,13 @@
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
+from myapp import views
 
 urlpatterns = [
-    path('', views.home, name='home'), 
-    path('new-entry/', views.new_entry, name='new_entry'),  
-    path('all-entries/', views.all_entries, name='all_entries'),  
-    path('progression/', views.progression, name='progression'),  
-    path('pictures-videos/', views.pictures_videos, name='pictures_videos'),  
+    path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('new-entry/', views.new_entry, name='new_entry'),
+    path('all-entries/', views.all_entries, name='all_entries'),
+    path('entry/', views.view_entry, name='view_entry'),
+    path('progression/', views.progression, name='progression'),
+    path('pictures-videos/', views.pictures_videos, name='pictures_videos'),
 ]
