@@ -10,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #007BFF;
+    background-color: #007BFF; 
     color: white;
     padding: 30px;
     border-radius: 20px;
@@ -128,4 +128,27 @@ input[type="date"] {
     margin: 8px 0;
     line-height: 1.6;
     font-weight: normal;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #0056b3; 
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
 }

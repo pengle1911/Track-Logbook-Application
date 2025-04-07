@@ -1,18 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from datetime import date, timedelta
 from .models import Entry
+from .forms import NewEntryForm
 
 def home(request):
     return render(request, 'myapp/home.html')
 
 def new_entry(request):
     if request.method == 'POST':
-        form = EntryForm(request.POST, request.FILES)
+        form = NewEntryForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return render(request, 'myapp/success.html') 
     else:
-        form = EntryForm()
+        form = NewEntryForm()
     return render(request, 'myapp/new_entry.html', {'form': form})
 
 def all_entries(request):
