@@ -10,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #007BFF; 
+    background-color: #007BFF;
     color: white;
     padding: 30px;
     border-radius: 20px;
@@ -22,6 +22,12 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
 }
 
 form {
@@ -92,49 +98,45 @@ input[type="date"] {
     outline: none;
 }
 
-.day {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
+.attachments-container {
     text-align: center;
-    border: none;
-    border-radius: 8px;
-    background-color: #e0e0e0;
-    color: black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.day:hover {
-    background-color: #007BFF;
-    color: white;
-    transform: scale(1.05);
-}
-
-.entry-details {
-    text-align: left;
     background-color: white;
     color: black;
-    padding: 20px;
+    padding: 40px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: visible; 
 }
 
-.entry-details p {
-    font-size: 16px;
-    margin: 8px 0;
-    line-height: 1.6;
-    font-weight: normal;
+.attachment h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0056b3;
 }
 
-a {
+.attachment img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.attachment video {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.attachment a {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #0056b3; 
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #0056b3;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -142,13 +144,143 @@ a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-a:hover {
+.attachment a:hover {
     background-color: #003d80;
     transform: scale(1.05);
 }
 
-p {
+.attachment {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-container {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.success-container a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.success-container a:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+.no-entries-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.no-entries-container h1 {
+    color: #ff0000;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.no-entries-container p {
     font-size: 18px;
-    line-height: 1.6;
-    margin: 15px 0;
+    color: #333;
+}
+
+.no-entries-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.no-entries-container a:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+.no-entries-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.no-entries-container h1 {
+    color: #ff0000;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.no-entries-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+.no-entries-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.no-entries-container a:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0056b3; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px; 
+    margin: 40px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block; 
 }

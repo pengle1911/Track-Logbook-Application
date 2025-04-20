@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Success!</h1>
-    <p>Your entry has been successfully saved.</p>
-    <a href="/new-entry/">Add another entry</a>
-    <a href="/">Return to Home</a>
+    <div class="success-container">
+        <h1>Success!</h1>
+        <p>Your entry has been successfully saved.</p>
+        <a href="/new-entry/">Add another entry</a>
+        <a href="/">Return to Home</a>
+    </div>
 </body>
 </html>

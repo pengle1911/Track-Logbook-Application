@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Entries Found</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <div class="no-entries-container">
+        <h1>No Entries Found</h1>
+        <p>There are no entries for {{ date }}.</p>
+        <a href="/">Return to Home</a>
+    </div>
+</body>
+</html>

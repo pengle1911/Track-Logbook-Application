@@ -1,9 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pictures & Videos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/styles.css' %}">
 </head>
 <body>
-    <h1>Pictures & Videos</h1>
+    <div class="attachments-container">
+        <h1>Pictures & Videos</h1>
+
+        {% for entry in entries %}
+            <div class="attachment">
+                <h2>{{ entry.title }} - {{ entry.date }}</h2>
+                
+                {% if entry.attachment %}
+                    {% if entry.attachment.url|slice:"-4:" == ".jpg" or entry.attachment.url|slice:"-4:" == ".png" %}
+                        <img src="{{ entry.attachment.url }}" alt="Attachment">
+                    {% elif entry.attachment.url|slice:"-4:" == ".mp4" or entry.attachment.url|slice:"-4:" == ".mov" %}
+                        <div class="video-container">
+                            <video controls>
+                                <source src="{{ entry.attachment.url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% else %}
+                        <p><a href="{{ entry.attachment.url }}" target="_blank">Download attachment</a></p>
+                    {% endif %}
+                {% else %}
+                    <p>No attachments available.</p>
+                {% endif %}
+            </div>
+        {% empty %}
+            <p>No entries with attachments found.</p>
+        {% endfor %}
+    </div>
 </body>
 </html>

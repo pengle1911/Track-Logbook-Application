@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="entry-details">
+        <h1>Entries for {{ entries.0.date }}</h1>
+
+        {% for entry in entries %}
+            <div class="entry">
+                <h2>{{ entry.title }}</h2>
+                <p>{{ entry.content }}</p>
+                {% if entry.attachment %}
+                    <p>Attachment: <a href="{{ entry.attachment.url }}" target="_blank">View</a></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <a href="/">Return to Home</a>
+    </div>
+</body>
+</html>
